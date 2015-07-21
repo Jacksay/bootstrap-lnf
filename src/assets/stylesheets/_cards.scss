@@ -1,0 +1,83 @@
+@mixin cardColor($color){
+  background: $color;
+  color:  lighten($color, 50%);
+  .card-title {
+    border-color: darken($color, 5%);
+    color:  lighten($color, 40%);
+    [class*="icon"] {
+      &.inverse:before{
+        background-color:  lighten($color, 20%);
+        color: $color;
+      }
+    }
+  }
+  .card-footer {
+    border-color: darken($color, 5%);
+    color:  lighten($color, 30%);
+  }
+}
+
+.card {
+  &.xs { font-size: .8em }
+  @include border-radius(2px);
+  @include box-shadow(.5em);
+
+  &.purple { @include cardColor($colorPurple); }
+  &.red { @include cardColor($colorRed); }
+  &.blue { @include cardColor($colorBlue); }
+  &.green { @include cardColor($colorGreen); }
+
+  .card-title, .card-footer {
+    background-image: url(../images/bg-25.png);
+  }
+  background-color: rgba(255,255,255,1);
+
+  padding: .25em;
+
+  .card-title {
+    margin: 0;
+    padding: 0 .5em;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-color: darken(white, 5%);
+    font-size: 1.25em;
+    line-height: 2em;
+    font-weight: lighter;
+  }
+
+  &.openable {
+    .card-title { border-bottom-width: 0; }
+    &.open {
+        .card-title { border-bottom-width: thin; }
+    }
+  }
+
+  .card-content {
+    margin: .5em;
+  }
+
+  .card-footer {
+    font-size: .8em;
+    border-top: $border;
+    font-weight: lighter;
+  }
+
+  >header {
+    margin: 0;
+    position: relative;
+    .menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .content {
+    padding: 0;
+    min-height: 2em;
+  }
+
+  >footer {
+    margin: 0 .5em;
+  }
+}

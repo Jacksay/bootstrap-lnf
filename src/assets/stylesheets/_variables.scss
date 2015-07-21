@@ -1,0 +1,22 @@
+$grey:  #68717A;
+$greyLight: lighten($grey, 42%);
+
+$colorMedium:   #64817A;
+$colorBlue:     #30b0d5;
+$colorOrange:   #C69951;
+$colorRed:      #DD423E;
+$colorGreen:    #499D1F;
+$colorPurple:   #853F89;
+$colorDark:     #1F180D;
+$colorLight:    #FEFEEF;
+$colorWhite:    #FFFFFF;
+
+$colorDefault:  $colorMedium;
+
+
+$borderRadius: .25em;
+$padding:      .5em;
+
+// Cartouche
+$cartoucheBorderRadius: $borderRadius;
+$cartouchePadding: $padding;

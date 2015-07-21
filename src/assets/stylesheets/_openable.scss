@@ -1,0 +1,31 @@
+
+.text-light {
+  font-weight: 100;
+  opacity: .8;
+}
+
+$colorSelect:           lighten($colorBlue, 30%);
+.selectable {
+  &.selected{
+    background-color: $colorSelect;
+  }
+}
+
+.openable {
+  .openable-content {
+    display: none;
+  }
+  .icon-openable{
+    cursor: pointer;
+    &:before {
+      content: '\e85f';
+    }
+  }
+
+  &.open {
+      .openable-content { display: block; }
+      .icon-openable:before {
+        content: '\e860';
+      }
+  }
+}

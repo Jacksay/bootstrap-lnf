@@ -1,0 +1,90 @@
+//
+// Cartouche
+// Author: Stéphane Bouvry <stephane.bouvry@unicaen.fr>
+// ---
+
+@mixin cartouche-addon($color){
+  background-color: $color;
+  color: lighten($color, 40%);
+  .addon {
+    color: darken($color, 25%);
+    background-color: lighten($color, 30%);
+    &:before {
+      background-color: lighten($color, 30%);;
+    }
+  }
+}
+
+
+.cartouche {
+  @include border-radius($cartoucheBorderRadius);
+  @include cartouche-addon($colorDefault);
+  display: inline-block;
+
+  padding: 0 $cartouchePadding 0 $cartouchePadding;
+  margin: .125em 0;
+  line-height: 1.75em;
+  background-color: $colorDefault;
+
+  text-shadow: -1px 1px 0 rgba(0,0,0,.1);
+  font-weight: 600;
+
+  a, strong { font-weight: 600; }
+
+  .addon {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    margin-left: $cartouchePadding/3;
+    padding-left: $cartouchePadding/3*2;
+    padding-right: $cartouchePadding;
+    font-weight: 100;
+    right: -$cartouchePadding;
+    @include border-radius(0 $cartoucheBorderRadius $cartoucheBorderRadius 0);
+
+    &:before {
+      content: '.';
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: .5em;
+      left: -.35em;
+      width: .7em;
+      height: .7em;
+      position: absolute;
+      display: block;
+      z-index: 0;
+      text-indent: -50px;
+      overflow: hidden;
+    }
+  }
+
+  &.leader,&.blue {
+    @include cartouche-addon(#30b0d5);
+  }
+
+  &.orange {
+    @include cartouche-addon(#C69951);
+  }
+
+  &.dark {
+    @include cartouche-addon(#1F180D);
+  }
+  &.red {
+    @include cartouche-addon(#DD423E);
+  }
+  &.green {
+    @include cartouche-addon(#499D1F);
+  }
+
+  &.valo,&.purple {
+    @include cartouche-addon(#853F89);
+  }
+
+  &.xs {
+    font-size: .75em;
+  }
+  &.big {
+    font-size: 1.5em;
+  }
+}
