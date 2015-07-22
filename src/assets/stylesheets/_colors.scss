@@ -1,3 +1,16 @@
+@function light($color){
+  @return lighten($color, 33%);
+}
+@function dark($color){
+  @return darken($color, 25%);
+}
+@function hard($color){
+  @return saturate($color, 25%);
+}
+@function grey($color){
+  @return desaturate($color, 33%);
+}
+
 @for $i from 1 through length($colors){
   .bg-#{nth($colorsName,$i)} {
     background-color: nth($colors, $i);

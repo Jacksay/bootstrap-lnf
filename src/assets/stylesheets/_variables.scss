@@ -29,7 +29,7 @@ $cComplementaryDark:          #85A000;
 $cComplementaryLight:         #DAFB3F;
 $cComplementaryUltraLight:    #E3FB71;
 
-$colorsName: prim seca secb secc secd comp;
+
 
 @function colorAmount( $value, $amount){
   $ret: $value / 100 * $amount;
@@ -46,8 +46,11 @@ $secondaryA: rgb(blue($primary), red($primary), green($primary));
 $secondaryB: rgb(blue($compl), red($compl), green($compl));
 $secondaryC: rgb(red($primary), blue($primary), green($primary));
 $secondaryD: rgb(red($compl), blue($compl), green($compl));
+$ultraLight: lighten($primary, 80%);
 
-$colors: $primary $secondaryA $secondaryB $secondaryC $secondaryD $compl;
+$colorsName: prim seca secb secc secd comp default;
+$colors: $primary $secondaryA $secondaryB $secondaryC $secondaryD $compl $ultraLight;
+
 // #AA3939 #AA6C39 #226666 #2D882D;
 
 $colorMedium:   #64817A;

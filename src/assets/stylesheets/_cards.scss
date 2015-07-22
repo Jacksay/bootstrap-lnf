@@ -13,6 +13,9 @@
       }
     }
   }
+  .card-content {
+    background-color:  lighten($color, 5%);
+  }
   .card-footer {
     border-color: darken($color, 5%);
     color:  lighten($color, 30%);
@@ -30,7 +33,7 @@
   @include box-shadow(.5em);
 
   @for $i from 1 through length($colors){
-    &.color-#{nth($colorsName,$i)} {
+    &.card-#{nth($colorsName,$i)} {
       @include cardColor(nth($colors, $i));
     }
   }
@@ -71,7 +74,7 @@
   }
 
   .card-content {
-    margin: .5em;
+    padding: .5em;
   }
 
   .card-footer {
