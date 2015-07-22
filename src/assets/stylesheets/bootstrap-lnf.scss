@@ -1,3 +1,4 @@
+/*! © 2015 Université de Caen Basse-Normandie */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,800,700italic,800italic);
 
 @import "variables";
@@ -10,8 +11,9 @@
 @import "openable";
 
 
-
 body {
+  margin: 0;
+  padding: 0;
   background: url(../images/bg.gif) $greyLight;
   padding-top: 52px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;

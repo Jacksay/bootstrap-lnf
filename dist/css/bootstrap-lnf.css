@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*! © 2015 Université de Caen Basse-Normandie */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,800,700italic,800italic);
 .cartouche {
   -webkit-border-radius: 0.25em;
@@ -565,6 +566,10 @@
   padding: .25em; }
   .card.xs {
     font-size: .8em; }
+  .card.big {
+    font-size: 1.25em; }
+  .card.huge {
+    font-size: 1.5em; }
   .card.purple {
     background: #853F89;
     color: #edd9ee; }
@@ -669,6 +674,8 @@
   content: '\e860'; }
 
 body {
+  margin: 0;
+  padding: 0;
   background: url(../images/bg.gif) #d9dcdf;
   padding-top: 52px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;

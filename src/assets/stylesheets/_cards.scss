@@ -1,6 +1,8 @@
+// Fonction utilisée pour automatiser les couleurs
 @mixin cardColor($color){
   background: $color;
   color:  lighten($color, 50%);
+
   .card-title {
     border-color: darken($color, 5%);
     color:  lighten($color, 40%);
@@ -17,8 +19,13 @@
   }
 }
 
+// élément de base
 .card {
-  &.xs { font-size: .8em }
+
+  &.xs { font-size: .8em; }
+  &.big { font-size: 1.25em; }
+  &.huge { font-size: 1.5em; }
+
   @include border-radius(2px);
   @include box-shadow(.5em);
 
