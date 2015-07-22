@@ -1,4 +1,22 @@
+# Folders
 bower_components
-.svn
-.bck
-.log
+node_modules
+
+# Extensions
+*.svn
+*.bck
+*.log
+*.diff
+*.swp
+*~
+
+# OS
+._*
+.cache
+.DS_Store
+.idea
+.project
+*.sublime-project
+*.sublime-workspace
+nbproject
+Thumbs.db

@@ -12,6 +12,7 @@ $colorLight:    #FEFEEF;
 $colorWhite:    #FFFFFF;
 
 $colorDefault:  $colorMedium;
+$border: solid thin lighten($colorMedium, 50%);
 
 
 $borderRadius: .25em;
