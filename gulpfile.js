@@ -5,6 +5,13 @@
 
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    webserver = require('gulp-webserver'),
+    // --- Configuration du serveur
+    config = {
+      server: {
+        port: 4000
+      }
+    },
     directories = {
         src: {
           css: './src/assets/stylesheets/'
@@ -16,9 +23,13 @@ var gulp = require('gulp'),
 
 
 // Default task
-gulp.task('default', ['sass', 'watch:sass']);
+gulp.task('default', ['sass', 'watch:sass', 'serve']);
 
-
+////////////////////////////////////////////////////////////////////////////////
+//
+// SASS
+//
+////////////////////////////////////////////////////////////////////////////////
 /**
  * Tâche permettant de compiler les fichiers SASS.
  *
@@ -36,4 +47,19 @@ gulp.task('sass', function () {
 
 gulp.task('watch:sass', function () {
     gulp.watch(directories.src.css + '**/*.scss', ['sass']);
+});
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// SERVER
+//
+////////////////////////////////////////////////////////////////////////////////
+gulp.task('serve', function () {
+  gulp.src('dist')
+    .pipe(webserver({
+      fallback: 'demo/demo.html',
+      livereload: true,
+      directoryListing: false,
+      open: true
+    }));
 });

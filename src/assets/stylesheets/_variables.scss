@@ -1,6 +1,55 @@
 $grey:  #68717A;
 $greyLight: lighten($grey, 42%);
 
+// Primary Color
+$cPrimary:                #A600A6;
+$cPrimaryDesaturate:      #7C1F7C;
+$cPrimaryDark:            #6C006C;
+$cPrimaryLight:           #D235D2;
+$cPrimaryUltraLight:      #D25FD2;
+
+// Secondary A Color
+$cSecondaryA:              #E40045;
+$cSecondaryADesaturate:    #AB2B52;
+$cSecondaryADark:          #94002D;
+$cSecondaryALight:         #F13C73;
+$cSecondaryAUltraLight:    #F16D95;
+
+// Secondary B Color
+$cSecondaryB:              #530FAD;
+$cSecondaryBDesaturate:    #4F2982;
+$cSecondaryBDark:          #330570;
+$cSecondaryBLight:         #8243D6;
+$cSecondaryBUltraLight:    #996AD6;
+
+// Complementary Color
+$cComplementary:              #CCF600;
+$cComplementaryDesaturate:    #A1B92E;
+$cComplementaryDark:          #85A000;
+$cComplementaryLight:         #DAFB3F;
+$cComplementaryUltraLight:    #E3FB71;
+
+$colorsName: prim seca secb secc secd comp;
+
+@function colorAmount( $value, $amount){
+  $ret: $value / 100 * $amount;
+  @if $ret > 255{
+    $ret: 255;
+  }
+  @return $ret;
+}
+
+// Calculated Colors
+$primary: #AEAB6A;
+$compl : complement($primary);
+$secondaryA: rgb(blue($primary), red($primary), green($primary));
+$secondaryB: rgb(blue($compl), red($compl), green($compl));
+$secondaryC: rgb(red($primary), blue($primary), green($primary));
+$secondaryD: rgb(red($compl), blue($compl), green($compl));
+
+$colors: $primary $secondaryA $secondaryB $secondaryC $secondaryD $compl;
+// #AA3939 #AA6C39 #226666 #2D882D;
+
 $colorMedium:   #64817A;
 $colorBlue:     #30b0d5;
 $colorOrange:   #C69951;

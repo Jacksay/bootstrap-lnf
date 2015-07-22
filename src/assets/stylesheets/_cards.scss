@@ -5,7 +5,7 @@
 
   .card-title {
     border-color: darken($color, 5%);
-    color:  lighten($color, 40%);
+    color:  lighten($color, 75%);
     [class*="icon"] {
       &.inverse:before{
         background-color:  lighten($color, 20%);
@@ -29,6 +29,17 @@
   @include border-radius(2px);
   @include box-shadow(.5em);
 
+  @for $i from 1 through length($colors){
+    &.color-#{nth($colorsName,$i)} {
+      @include cardColor(nth($colors, $i));
+    }
+  }
+/*
+  &.colorPrimary {        @include cardColor($cPrimaryDark); }
+  &.colorSecondaryA {     @include cardColor($cSecondaryADark); }
+  &.colorSecondaryB {     @include cardColor($cSecondaryBDark); }
+  &.colorComplementary {  @include cardColor($cComplementaryDark); }
+*/
   &.purple { @include cardColor($colorPurple); }
   &.red { @include cardColor($colorRed); }
   &.blue { @include cardColor($colorBlue); }

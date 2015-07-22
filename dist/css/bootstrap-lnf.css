@@ -1,6 +1,102 @@
 @charset "UTF-8";
 /*! © 2015 Université de Caen Basse-Normandie */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,800,700italic,800italic);
+.bg-prim {
+  background-color: #AEAB6A; }
+
+.bg-prim-grey {
+  background-color: #8c8c8c; }
+
+.bg-prim-light {
+  background-color: #e9e8d7; }
+
+.bg-prim-dark {
+  background-color: #636136;
+  color: #f6f6ee; }
+
+.bg-prim-hard {
+  background-color: #cbc54d; }
+
+.bg-seca {
+  background-color: #6aaeab; }
+
+.bg-seca-grey {
+  background-color: #8c8c8c; }
+
+.bg-seca-light {
+  background-color: #d7e9e8; }
+
+.bg-seca-dark {
+  background-color: #366361;
+  color: #eef6f6; }
+
+.bg-seca-hard {
+  background-color: #4dcbc5; }
+
+.bg-secb {
+  background-color: #ae6a6d; }
+
+.bg-secb-grey {
+  background-color: #8c8c8c; }
+
+.bg-secb-light {
+  background-color: #e9d7d8; }
+
+.bg-secb-dark {
+  background-color: #633638;
+  color: #f6eeee; }
+
+.bg-secb-hard {
+  background-color: #cb4d53; }
+
+.bg-secc {
+  background-color: #ae6aab; }
+
+.bg-secc-grey {
+  background-color: #8c8c8c; }
+
+.bg-secc-light {
+  background-color: #e9d7e8; }
+
+.bg-secc-dark {
+  background-color: #633661;
+  color: #f6eef6; }
+
+.bg-secc-hard {
+  background-color: #cb4dc5; }
+
+.bg-secd {
+  background-color: #6aae6d; }
+
+.bg-secd-grey {
+  background-color: #8c8c8c; }
+
+.bg-secd-light {
+  background-color: #d7e9d8; }
+
+.bg-secd-dark {
+  background-color: #366338;
+  color: #eef6ee; }
+
+.bg-secd-hard {
+  background-color: #4dcb53; }
+
+.bg-comp {
+  background-color: #6a6dae; }
+
+.bg-comp-grey {
+  background-color: #8c8c8c; }
+
+.bg-comp-light {
+  background-color: #d7d8e9; }
+
+.bg-comp-dark {
+  background-color: #363863;
+  color: #eeeef6; }
+
+.bg-comp-hard {
+  background-color: #4d53cb; }
+
 .cartouche {
   -webkit-border-radius: 0.25em;
   -moz-border-radius: 0.25em;
@@ -562,6 +658,12 @@
   -moz-border-radius: 2px;
   border-radius: 2px;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
+  /*
+  &.colorPrimary {        @include cardColor($cPrimaryDark); }
+  &.colorSecondaryA {     @include cardColor($cSecondaryADark); }
+  &.colorSecondaryB {     @include cardColor($cSecondaryBDark); }
+  &.colorComplementary {  @include cardColor($cComplementaryDark); }
+*/
   background-color: white;
   padding: .25em; }
   .card.xs {
@@ -570,12 +672,84 @@
     font-size: 1.25em; }
   .card.huge {
     font-size: 1.5em; }
+  .card.color-prim {
+    background: #AEAB6A;
+    color: white; }
+    .card.color-prim .card-title {
+      border-color: #a5a25a;
+      color: white; }
+      .card.color-prim .card-title [class*="icon"].inverse:before {
+        background-color: #d2d0ac;
+        color: #AEAB6A; }
+    .card.color-prim .card-footer {
+      border-color: #a5a25a;
+      color: #e4e3cd; }
+  .card.color-seca {
+    background: #6aaeab;
+    color: white; }
+    .card.color-seca .card-title {
+      border-color: #5aa5a2;
+      color: white; }
+      .card.color-seca .card-title [class*="icon"].inverse:before {
+        background-color: #acd2d0;
+        color: #6aaeab; }
+    .card.color-seca .card-footer {
+      border-color: #5aa5a2;
+      color: #cde4e3; }
+  .card.color-secb {
+    background: #ae6a6d;
+    color: white; }
+    .card.color-secb .card-title {
+      border-color: #a55a5d;
+      color: white; }
+      .card.color-secb .card-title [class*="icon"].inverse:before {
+        background-color: #d2acae;
+        color: #ae6a6d; }
+    .card.color-secb .card-footer {
+      border-color: #a55a5d;
+      color: #e4cdce; }
+  .card.color-secc {
+    background: #ae6aab;
+    color: white; }
+    .card.color-secc .card-title {
+      border-color: #a55aa2;
+      color: white; }
+      .card.color-secc .card-title [class*="icon"].inverse:before {
+        background-color: #d2acd0;
+        color: #ae6aab; }
+    .card.color-secc .card-footer {
+      border-color: #a55aa2;
+      color: #e4cde3; }
+  .card.color-secd {
+    background: #6aae6d;
+    color: white; }
+    .card.color-secd .card-title {
+      border-color: #5aa55d;
+      color: white; }
+      .card.color-secd .card-title [class*="icon"].inverse:before {
+        background-color: #acd2ae;
+        color: #6aae6d; }
+    .card.color-secd .card-footer {
+      border-color: #5aa55d;
+      color: #cde4ce; }
+  .card.color-comp {
+    background: #6a6dae;
+    color: white; }
+    .card.color-comp .card-title {
+      border-color: #5a5da5;
+      color: white; }
+      .card.color-comp .card-title [class*="icon"].inverse:before {
+        background-color: #acaed2;
+        color: #6a6dae; }
+    .card.color-comp .card-footer {
+      border-color: #5a5da5;
+      color: #cdcee4; }
   .card.purple {
     background: #853F89;
     color: #edd9ee; }
     .card.purple .card-title {
       border-color: #743778;
-      color: #dbb6de; }
+      color: white; }
       .card.purple .card-title [class*="icon"].inverse:before {
         background-color: #b971bd;
         color: #853F89; }
@@ -587,7 +761,7 @@
     color: white; }
     .card.red .card-title {
       border-color: #d92d28;
-      color: #fceceb; }
+      color: white; }
       .card.red .card-title [class*="icon"].inverse:before {
         background-color: #ec9795;
         color: #DD423E; }
@@ -599,7 +773,7 @@
     color: white; }
     .card.blue .card-title {
       border-color: #28a1c4;
-      color: #daf1f7; }
+      color: white; }
       .card.blue .card-title [class*="icon"].inverse:before {
         background-color: #85d0e6;
         color: #30b0d5; }
@@ -611,7 +785,7 @@
     color: #d6f4c7; }
     .card.green .card-title {
       border-color: #3f881b;
-      color: #b7ec9c; }
+      color: white; }
       .card.green .card-title [class*="icon"].inverse:before {
         background-color: #78db47;
         color: #499D1F; }

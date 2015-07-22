@@ -1,0 +1,18 @@
+@for $i from 1 through length($colors){
+  .bg-#{nth($colorsName,$i)} {
+    background-color: nth($colors, $i);
+  }
+  .bg-#{nth($colorsName,$i)}-grey {
+    background-color: desaturate(nth($colors, $i), 33%);
+  }
+  .bg-#{nth($colorsName,$i)}-light {
+    background-color: lighten(nth($colors, $i), 33%);
+  }
+  .bg-#{nth($colorsName,$i)}-dark {
+    background-color: darken(nth($colors, $i), 25%);
+    color: lighten(nth($colors, $i), 40%);
+  }
+  .bg-#{nth($colorsName,$i)}-hard {
+    background-color: saturate(nth($colors, $i), 25%);
+  }
+}
