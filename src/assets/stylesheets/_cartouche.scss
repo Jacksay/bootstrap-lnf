@@ -95,10 +95,9 @@
     @include cartouche-addon(#853F89);
   }
 
-  &.xs {
-    font-size: .75em;
-  }
-  &.big {
-    font-size: 1.5em;
+  @for $i from 1 through length($sizes){
+    &.#{nth($sizes,$i)} {
+      font-size: .75em + ( .25em * ($i - 1));
+    }
   }
 }

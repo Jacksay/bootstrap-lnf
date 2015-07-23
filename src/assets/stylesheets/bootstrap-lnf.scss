@@ -27,3 +27,21 @@ body {
   border: none;
   font-weight: lighter;
 }
+
+.rounded {
+  border-radius: .5em;
+}
+
+
+// ALERT
+.alert {
+  border-radius: .5em;
+  padding: .5em .75em;
+}
+
+@for $i from 1 through length($colors){
+  .alert-#{nth($colorsName,$i)} {
+    @extend .alert;
+    background-color: nth($colors, $i);
+  }
+}

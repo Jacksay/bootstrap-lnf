@@ -15,8 +15,10 @@ $colorSelect:           lighten($colorBlue, 30%);
   .openable-content {
     display: none;
   }
-  .icon-openable{
+  .handler {
     cursor: pointer;
+  }
+  .icon-openable{
     &:before {
       content: '\e85f';
     }
