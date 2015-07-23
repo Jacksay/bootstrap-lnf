@@ -26,13 +26,11 @@
   margin: .125em 0;
   line-height: 1.5em;
   font-size: 1em;
-  background-color: $ultraLight;
-  color: $colorDefault;
 
-  text-shadow: -1px 1px 0 rgba(0,0,0,.1);
+  text-shadow: -1px 1px 1px rgba(0,0,0,.5);
   font-weight: 600;
 
-  a, strong { font-weight: 600; }
+  @include cartouche-addon(lighten($grey,15%));
 
   .addon {
     position: relative;
@@ -62,10 +60,10 @@
     }
   }
 
+  &.bordered {
+    border: solid thin lighten($colorDefault,40%);
+  }
 
-    &.bordered {
-      border: solid thin lighten($colorDefault,40%);
-    }
 
   &.leader,&.blue {
     @include cartouche-addon(#30b0d5);

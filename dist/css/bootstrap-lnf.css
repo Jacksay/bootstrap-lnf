@@ -146,17 +146,21 @@
   margin: .125em 0;
   line-height: 1.5em;
   font-size: 1em;
-  background-color: white;
-  color: #64817A;
-  text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.1);
-  font-weight: 600; }
+  text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  background-color: #8f97a0;
+  color: #fdfdfd;
+  border-color: #68717a; }
   .cartouche .addon {
     color: #2c3936;
     background-color: #b7c7c3; }
     .cartouche .addon:before {
       background-color: #b7c7c3; }
-  .cartouche a, .cartouche strong {
-    font-weight: 600; }
+  .cartouche .addon {
+    color: #51585e;
+    background-color: #e2e4e6; }
+    .cartouche .addon:before {
+      background-color: #e2e4e6; }
   .cartouche .addon {
     position: relative;
     display: inline-block;
