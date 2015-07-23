@@ -14,6 +14,7 @@
 
     <!-- Bootstrap  -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/github.min.css" media="screen" title="no title" charset="utf-8">
     <link href="../css/bootstrap-lnf.css" rel="stylesheet" />
 
 <style media="screen">
@@ -40,6 +41,7 @@ margin: 0px 0px 10px;
   text-align: center;
   line-height: 90px;
   margin-bottom: 1em;
+  font-size: .75em;
 }
 </style>
 
@@ -103,8 +105,15 @@ margin: 0px 0px 10px;
       <div class="container">
 
         <p>
-          Color are normalized in <strong>sass</strong> with functions : <code>ultraligh($color)</code>
+          Color are calculated and normalized in <strong>sass</strong> with functions :
         </p>
+        <ul>
+          <li><code>ultraligh($color)</code></li>
+          <li><code>light($color)</code></li>
+          <li><code>hard($color)</code> (more saturate)</li>
+          <li><code>grey($color)</code></li>
+          <li><code>dark($color)</code></li>
+        </ul>
 
         {{#each lights}}
           <div class="nuancier row">
@@ -720,10 +729,19 @@ margin: 0px 0px 10px;
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="../js/bootstrap-lnf.js"></script>
-    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+
+    <script type="text/javascript">
+      // Activate Syntaxhighlight
+      $(document).ready(function() {
+        $('pre').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
 
   </body>
 </html>

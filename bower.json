@@ -21,6 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "~3.3.5"
+    "bootstrap-sass": "~3.3.5",
+    "highlight.js": "https://github.com/isagalaev/highlight.js.git#~7.0.1"
   }
 }

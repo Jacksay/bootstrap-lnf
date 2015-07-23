@@ -945,8 +945,6 @@
     .card.green .card-footer {
       border-color: #3f881b;
       color: #98e372; }
-  .card .card-title, .card .card-footer {
-    background-image: url(../images/bg-25.png); }
   .card .card-title {
     margin: 0;
     padding: 0 0.5em;

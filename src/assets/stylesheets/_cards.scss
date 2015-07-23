@@ -2,7 +2,6 @@
 @mixin cardColor($color){
   background: $color;
   color:  lighten($color, 50%);
-
   .card-title {
     border-color: darken($color, 5%);
     color:  lighten($color, 75%);
@@ -49,7 +48,8 @@
   &.green { @include cardColor($colorGreen); }
 
   .card-title, .card-footer {
-    background-image: url(../images/bg-25.png);
+    // 
+    // background-image: url(../images/bg-25.png);
   }
   background-color: rgba(255,255,255,1);
 
