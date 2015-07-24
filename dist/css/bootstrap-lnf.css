@@ -1059,9 +1059,9 @@
   -moz-border-radius: 4px;
   border-radius: 4px;
   box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
-  background: #d9dcdf url(../images/bg-25.png);
-  color: white;
-  border-color: #b0b6bc;
+  background: #68717A url(../images/bg-25.png);
+  color: #d9dcdf;
+  border-color: #454b51;
   text-shadow: 1px -1px 0px rgba(0, 0, 0, 0.3);
   border: #636136 2px solid;
   padding: 0.5em 1em;

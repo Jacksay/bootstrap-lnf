@@ -7,7 +7,7 @@
 .block-note, .block-danger, .block-success, .block-warning, .block-info  {
   @include border-radius(4px);
   @include box-shadow();
-  @include blockColor($greyLight);
+  @include blockColor($grey);
   text-shadow: 1px -1px 0px rgba(0,0,0,.3);
   border: dark($primary) 2px solid;
   padding: .5em 1em;
