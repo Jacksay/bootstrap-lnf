@@ -8,6 +8,8 @@
 @import "cartouche";
 @import "icons";
 @import "cards";
+@import "iconsMenu";
+@import "block";
 
 @import "openable";
 
@@ -26,12 +28,12 @@ body {
   color: dark($compl);
   border: none;
   font-weight: lighter;
+  padding-top: 50px;
 }
 
 .rounded {
   border-radius: .5em;
 }
-
 
 // ALERT
 .alert {

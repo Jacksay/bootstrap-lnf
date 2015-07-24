@@ -1,0 +1,33 @@
+@mixin blockColor($color){
+  background: $color url(../images/bg-25.png);
+  color: ultralight($color);
+  border-color: darken($color, 15%);
+}
+
+.block-note, .block-danger, .block-success, .block-warning, .block-info  {
+  @include border-radius(4px);
+  @include box-shadow();
+  @include blockColor($greyLight);
+  text-shadow: 1px -1px 0px rgba(0,0,0,.3);
+  border: dark($primary) 2px solid;
+  padding: .5em 1em;
+  margin-left: .5em;
+  margin-right: .5em;
+  //box-shadow: inset 0 0 4em rgba(0,0,0,.25);
+}
+
+.block-success {
+  @include blockColor($secondaryD);
+}
+
+.block-warning {
+  @include blockColor($primary);
+}
+
+.block-info {
+  @include blockColor($secondaryA);
+}
+
+.block-danger {
+  @include blockColor($secondaryB);
+}

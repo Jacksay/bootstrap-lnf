@@ -90,6 +90,34 @@ margin: 0px 0px 10px;
       </div>
     </nav>
 
+    <nav class="menu-icon onleft compl" style="top: 25%; position: fixed ">
+      <span class="heading">Components</span>
+      <a class="item" href="#cartouche">
+        <i class="icon-tag"></i><span class="item-label">Cartouche</span>
+      </a>
+      <a class="item" href="#card">
+        <i class="icon-popup"></i><span class="item-label">Card</span>
+      </a>
+      <a class="item" href="#icon-menu">
+        <i class="icon-bookmark"></i><span class="item-label">Menu (icons)</span>
+      </a>
+      <a class="item" href="#block">
+        <i class="icon-pin-outline"></i><span class="item-label">Block</span>
+      </a>
+      <span class="heading">Utils</span>
+      <a class="item" href="#colors">
+        <i class="icon-tag"></i><span class="item-label">Color</span>
+      </a>
+      <a class="item" href="#icons">
+        <i class="icon-picture-outline"></i><span class="item-label">Icons</span>
+      </a>
+      <span class="divider"></span>
+      <a class="item" href="#">
+        <i class="icon-home-outline"></i>
+        <span class="item-label">Top</span>
+      </a>
+    </nav>
+
     <div class="container">
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
@@ -98,7 +126,7 @@ margin: 0px 0px 10px;
       </div>
     </div>
 
-      <div class="page-header">
+      <div class="page-header" id="colors">
         <h1 class="container">Colors</h1>
       </div>
 
@@ -126,7 +154,7 @@ margin: 0px 0px 10px;
         {{/each}}
       </div>
 
-      <div class="page-header">
+      <div class="page-header" id="cartouche">
         <h1 class="container">Cartouche</h1>
       </div>
 
@@ -250,7 +278,7 @@ margin: 0px 0px 10px;
       {{/each}}
 
 
-      <div class="page-header">
+      <div class="page-header" id="icons">
         <h1>Icons</h1>
       </div>
         <p>
@@ -447,7 +475,7 @@ margin: 0px 0px 10px;
         </div>
 
 
-      <div class="page-header">
+      <div class="page-header" id="card">
         <h1>Card</h1>
       </div>
 
@@ -632,7 +660,7 @@ margin: 0px 0px 10px;
   &lt;/div>
   &lt;footer class="card-footer">.card-footer example&lt;/footer>
 &lt;/article>
-          </pre>
+</pre>
 
           <article class="card openable">
             <header class="card-title">
@@ -699,7 +727,7 @@ margin: 0px 0px 10px;
           <p>
             exemple :
           </p>
-          <pre>
+<pre>
 &lt;article class="card openable" style="margin-bottom: 1em">
   &lt;header class="card-title">
     &lt;i class="icon-openable handler">&lt;/i>
@@ -713,16 +741,105 @@ margin: 0px 0px 10px;
     &lt;/p>
   &lt;/div>
   &lt;footer class="card-footer">.card-footer example&lt;/footer>
-&lt;/article>
-          </pre>
+&lt;/article></pre>
         </div>
       </div>
 
 
+      <div class="page-header" id="icon-menu">
+        <h1>Icon menu</h1>
+      </div>
+      <p>
+        put a compact css menu on the left or right
+      </p>
+      <div class="result" style="position: relative; padding: 1em 5em">
+          <h2>Fake content</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <nav class="menu-icon onleft neutral" style="top: 1em; left: .5em">
+            <a class="item" href="#">
+              <i class="icon-tag"></i>
+              <span class="item-label">An option</span>
+            </a>
+            <a class="item" href="#">
+              <i class="icon-link-outline"></i>
+              <span class="item-label">An other option</span>
+            </a>
+            <span class="divider"></span>
+            <a class="item" href="#">
+              <i class="icon-edit"></i>
+              <span class="item-label">An other option</span>
+            </a>
+          </nav>
 
+          <nav class="menu-icon onright compl" style="top: 1em; right: .5em">
+            <a class="item" href="#">
+              <i class="icon-tag"></i>
+              <span class="item-label">An option</span>
+            </a>
+            <a class="item" href="#">
+              <i class="icon-link-outline"></i>
+              <span class="item-label">An other option</span>
+            </a>
+            <span class="divider"></span>
+            <a class="item" href="#">
+              <i class="icon-edit"></i>
+              <span class="item-label">An other option</span>
+            </a>
+          </nav>
 
       </div>
-<hr/>
+
+
+
+      <section>
+        <div class="page-header" id="block">
+          <h1>Block</h1>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            </p>
+            <div class="block-success">
+              <p>
+                Congratulation ! You successfully use the <strong>Succes Block</strong> using <code>.block-success</code> CSS class.
+              </p>
+            </div>
+            <p>
+              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="block-danger">
+              <p>
+                Create an <strong>Danger Block</strong> using <code>.block-danger</code> CSS class.
+              </p>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="col-md-6">
+            A alert
+            <div class="block-warning">
+              <p>Use <code>.block-warning</code> class for <q cite="">Keep yours eyes open guy !</q> block.
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="block-info">
+              <p>Finaly, <code>.block-info</code> supplies an amazing <strong>Info Box</strong> for vitals informations like this one.
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+
+
     </div>
 
 
