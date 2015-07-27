@@ -15,6 +15,7 @@
     <!-- Bootstrap  -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/github.min.css" media="screen" title="no title" charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href="../css/bootstrap-lnf.css" rel="stylesheet" />
 
 <style media="screen">
@@ -211,19 +212,50 @@
           </p>
           <div class="row">
           {{#each @root.colors}}
-            <div class="col-md-2 text-center">
-              <span class="cartouche {{ this }}">.cartouche.{{ this }}</span>
+            <div class="row">
+              <div class="col-md-4 text-center">
+                <span class="cartouche {{ this }}">.cartouche.{{ this }}</span>
+              </div>
+              <div class="col-md-8"><pre><code>&lt;span class="cartouche {{ this }}">
+  .cartouche.{{ this }}
+&lt;/span>
+</code></pre>
+              </div>
             </div>
           {{/each}}
           </div>
           <hr>
+
+          <h2>Addon</h2>
+
+          <div class="row">
+          {{#each @root.colors}}
+            <div class="row">
+              <div class="col-md-4 text-center">
+                <span class="cartouche {{ this }}">
+                  .cartouche.{{ this }}
+                  <span class="addon">Addon</span>
+                </span>
+              </div>
+              <div class="col-md-8"><pre><code>&lt;span class="cartouche {{ this }}">
+  .cartouche.{{ this }}
+  &lt;span>Addon&lt;/span>
+&lt;/span>
+</code></pre>
+              </div>
+            </div>
+          {{/each}}
+          </div>
+
+          <h2>Bordered</h2>
           <p>
             <code>bordered</code> CSS class display a border :
           </p>
           <div class="row">
           {{#each @root.colors}}
-            <div class="col-md-2 text-center">
-              <span class="cartouche bordered {{ this }}">.cartouche.{{ this }}</span>
+            <div class="col-md-4 text-center">
+              <span class="cartouche bordered {{ this }}">.cartouche.{{ this }}</span><br/>
+              <span class="cartouche bordered {{ this }}">.cartouche.{{ this }}<span class="addon">With Addon</span></span>
             </div>
           {{/each}}
           </div>
