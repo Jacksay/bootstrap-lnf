@@ -56,7 +56,7 @@ gulp.task('watch:sass', function () {
 
 gulp.task('hbs', function(){
   var datas = {
-    colors: ['prim', 'seca', 'secb', 'secc', 'secd', 'comp'],
+    colors: ['primary', 'secondary1', 'secondary2', 'complementary', 'success', 'info', 'danger', 'warning'],
     lights: ['ultralight', 'light', 'standard', 'hard', 'dark', 'grey'],
     sizes: ['xs', 'normal', 'big', 'hudge']
   };

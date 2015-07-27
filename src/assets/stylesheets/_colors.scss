@@ -15,6 +15,18 @@
 }
 
 @for $i from 1 through length($colors){
+  .bg-#{nth($colorsName,$i)},
+  .bg-#{nth($colorsName,$i)}-standard,
+  .bg-#{nth($colorsName,$i)}-grey,
+  .bg-#{nth($colorsName,$i)}-dark,
+  .bg-#{nth($colorsName,$i)}-hard {
+    text-shadow: -1px 1px 1px rgba(0,0,0,.3);
+    color: lighten(nth($colors, $i), 50%);
+    a, h1, h2, h3, h4, h5, h6, strong, em {
+      color: lighten(nth($colors, $i), 60%);;
+    }
+  }
+
   .bg-#{nth($colorsName,$i)}, .bg-#{nth($colorsName,$i)}-standard {
     background-color: nth($colors, $i);
   }
@@ -29,7 +41,6 @@
   }
   .bg-#{nth($colorsName,$i)}-dark {
     background-color: darken(nth($colors, $i), 25%);
-    color: lighten(nth($colors, $i), 40%);
   }
   .bg-#{nth($colorsName,$i)}-hard {
     background-color: saturate(nth($colors, $i), 25%);

@@ -1,0 +1,32 @@
+.navbar {
+  border-radius: 0;
+
+  @for $i from 1 through length($colors){
+    &.navbar-#{nth($colorsName,$i)} {
+      background-color: nth($colors, $i);
+      color: lighten(nth($colors, $i), 50%);
+      a, h1, h2, h3, h4, h5, h6, strong, em {
+        color: lighten(nth($colors, $i), 60%);;
+      }
+      .active a {
+        background-color: lighten(nth($colors, $i), 20%);
+      }
+      a {
+        transition: all 1s;
+        color: lighten(nth($colors, $i), 50%);
+        &:focus {
+          background-color: lighten(nth($colors, $i), 20%);
+        }
+        &:hover {
+          background-color: lighten(nth($colors, $i), 10%);
+        }
+      }
+      .dropdown-menu a {
+        color: nth($colors, $i);
+        &:hover {
+          background-color: lighten(nth($colors, $i), 50%);
+        }
+      }
+    }
+  }
+}
