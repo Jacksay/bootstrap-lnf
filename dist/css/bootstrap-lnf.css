@@ -1706,16 +1706,16 @@ $ultraLight: lighten($primary, 80%);
 .selectable.selected {
   background-color: #afe1ef; }
 
-.openable .openable-content {
+.openable:not(.open) .openable-content {
   display: none; }
+
+.openable:not(.open) .icon-openable:before {
+  content: '\e85f' !important; }
 
 .openable .handler {
   cursor: pointer; }
 
-.openable .icon-openable:before {
-  content: '\e85f'; }
-
-.openable.open .openable-content {
+.openable.open > .openable-content {
   display: block; }
 
 .openable.open .icon-openable:before {

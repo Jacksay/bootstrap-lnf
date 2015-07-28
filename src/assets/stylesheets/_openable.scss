@@ -12,20 +12,23 @@ $colorSelect:           lighten($colorBlue, 30%);
 }
 
 .openable {
-  .openable-content {
-    display: none;
+  &:not(.open) {
+    .openable-content {
+      display: none;
+    }
+    .icon-openable{
+      &:before {
+        content: '\e85f' !important;
+      }
+    }
   }
   .handler {
     cursor: pointer;
   }
-  .icon-openable{
-    &:before {
-      content: '\e85f';
-    }
-  }
+
 
   &.open {
-      .openable-content { display: block; }
+      >.openable-content { display: block; }
       .icon-openable:before {
         content: '\e860';
       }

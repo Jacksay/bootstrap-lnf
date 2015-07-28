@@ -129,6 +129,9 @@
         <i class="icon-pin-outline"></i><span class="item-label">Block</span>
       </a>
       <span class="heading">Utils</span>
+      <a class="item" href="#openable">
+        <i class="icon-tag"></i><span class="item-label">Openable</span>
+      </a>
       <a class="item" href="#colors">
         <i class="icon-tag"></i><span class="item-label">Color</span>
       </a>
@@ -678,6 +681,7 @@
 
       <h2>Openable</h2>
 
+
       <div class="row">
 
         <div class="col-md-4">
@@ -798,6 +802,32 @@
   &lt;footer class="card-footer">.card-footer example&lt;/footer>
 &lt;/article></pre>
         </div>
+      </div>
+
+
+      <h3>Nested</h3>
+      <div class="row">
+        <article class="card openable open" style="margin-bottom: 1em">
+          <header class="card-title handler">
+            <i class="icon-openable"></i>
+            First level openable
+          </header>
+          <div class="card-content openable-content openable">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <aside class="card card-success">
+              <header class="card-header handler">
+                <i class="icon-openable"></i>
+                Details
+              </header>
+              <div class="card-content openable-content">
+                Second level
+              </div>
+            </div>
+          </div>
+          <footer class="card-footer">.card-footer example</footer>
+        </article>
       </div>
 
 
