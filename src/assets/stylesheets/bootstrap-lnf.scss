@@ -47,9 +47,25 @@ a {
 }
 
 .page-header {
-  color: dark($compl);
   border: none;
   font-weight: lighter;
+  box-shadow: inset 0 3em 6em rgba(255,255,255,.1);
+  
+  .baseline {
+    font-size: 1.5em;
+    font-weight: 100;
+    font-style: italic;
+    margin: 0;
+  }
+
+  &.hudge {
+    padding: 6em 0 1em;
+    h1 {
+      font-size: 4em;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .rounded {
