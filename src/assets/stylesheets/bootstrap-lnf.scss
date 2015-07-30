@@ -1,5 +1,6 @@
 /*! © 2015 Université de Caen Basse-Normandie */
 @import "variables";
+
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 @import "mixins";
@@ -21,9 +22,18 @@ body {
   background-image: url(../images/bg-25.png);
 }
 
+
+
 h1, h2, h3, h4, h5, h6, strong, em {
   color: $brand-primary;
-  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+strong {
+  font-weight: 600;
 }
 
 abbr {
@@ -32,13 +42,13 @@ abbr {
   &:before  { content: '['; }
   &:after   { content: ']'; }
 }
-
+/*
 a {
   color: $colorLink;
   &:hover {
     color: lighten($colorLink, 25%);
   }
-}
+}*/
 
 .site-header {
   font-size: 1.25em;

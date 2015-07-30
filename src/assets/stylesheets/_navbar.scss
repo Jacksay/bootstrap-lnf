@@ -16,7 +16,7 @@
         background-color: lighten(nth($colors, $i), 20%);
       }
       a {
-        transition: all 1s;
+        transition: all .3s;
         color: lighten(nth($colors, $i), 50%);
         &:focus {
           background-color: lighten(nth($colors, $i), 20%);

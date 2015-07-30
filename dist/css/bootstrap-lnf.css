@@ -7229,7 +7229,7 @@ button.close {
     .navbar.navbar-primary .active a {
       background-color: #7777a6; }
     .navbar.navbar-primary a {
-      transition: all 1s;
+      transition: all 0.3s;
       color: #d3d3e3; }
       .navbar.navbar-primary a:focus {
         background-color: #7777a6; }
@@ -7248,7 +7248,7 @@ button.close {
     .navbar.navbar-secondary1 .active a {
       background-color: #8471a5; }
     .navbar.navbar-secondary1 a {
-      transition: all 1s;
+      transition: all 0.3s;
       color: #d5cfe0; }
       .navbar.navbar-secondary1 a:focus {
         background-color: #8471a5; }
@@ -7267,7 +7267,7 @@ button.close {
     .navbar.navbar-secondary2 .active a {
       background-color: #c5c09d; }
     .navbar.navbar-secondary2 a {
-      transition: all 1s;
+      transition: all 0.3s;
       color: #fefefd; }
       .navbar.navbar-secondary2 a:focus {
         background-color: #c5c09d; }
@@ -7286,7 +7286,7 @@ button.close {
     .navbar.navbar-complementary .active a {
       background-color: #dfdfce; }
     .navbar.navbar-complementary a {
-      transition: all 1s;
+      transition: all 0.3s;
       color: white; }
       .navbar.navbar-complementary a:focus {
         background-color: #dfdfce; }
@@ -7305,7 +7305,7 @@ button.close {
     .navbar.navbar-success .active a {
       background-color: #78db47; }
     .navbar.navbar-success a {
-      transition: all 1s;
+      transition: all 0.3s;
       color: #d6f4c7; }
       .navbar.navbar-success a:focus {
         background-color: #78db47; }
@@ -7324,7 +7324,7 @@ button.close {
     .navbar.navbar-info .active a {
       background-color: #85d0e6; }
     .navbar.navbar-info a {
-      transition: all 1s;
+      transition: all 0.3s;
       color: white; }
       .navbar.navbar-info a:focus {
         background-color: #85d0e6; }
@@ -7343,7 +7343,7 @@ button.close {
     .navbar.navbar-danger .active a {
       background-color: #ec9795; }
     .navbar.navbar-danger a {
-      transition: all 1s;
+      transition: all 0.3s;
       color: white; }
       .navbar.navbar-danger a:focus {
         background-color: #ec9795; }
@@ -7362,7 +7362,7 @@ button.close {
     .navbar.navbar-warning .active a {
       background-color: #dfc69e; }
     .navbar.navbar-warning a {
-      transition: all 1s;
+      transition: all 0.3s;
       color: white; }
       .navbar.navbar-warning a:focus {
         background-color: #dfc69e; }
@@ -7400,8 +7400,13 @@ body {
   background-image: url(../images/bg-25.png); }
 
 h1, h2, h3, h4, h5, h6, strong, em {
-  color: #48486F;
-  font-weight: 300; }
+  color: #48486F; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100; }
+
+strong {
+  font-weight: 600; }
 
 abbr {
   color: #5c5c8e;
@@ -7411,11 +7416,13 @@ abbr {
   abbr:after {
     content: ']'; }
 
+/*
 a {
-  color: #5454e2; }
-  a:hover {
-    color: #c1c1f5; }
-
+  color: $colorLink;
+  &:hover {
+    color: lighten($colorLink, 25%);
+  }
+}*/
 .site-header {
   font-size: 1.25em;
   padding: 2em 0; }
