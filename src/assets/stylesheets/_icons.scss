@@ -10,19 +10,16 @@
       color: white;
     }
     &.green:before {
-      background: $colorGreen;
+      background: $brand-success;
     }
     &.blue:before {
-      background: $colorBlue;
+      background: $brand-info;
     }
     &.orange:before {
-      background: $colorOrange;
-    }
-    &.purple:before {
-      background: $colorPurple;
+      background: $brand-warning;
     }
     &.red:before {
-      background: $colorRed;
+      background: $brand-danger;
     }
   }
 }

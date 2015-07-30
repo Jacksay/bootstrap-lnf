@@ -1,7 +1,8 @@
 /*! © 2015 Université de Caen Basse-Normandie */
 @import "variables";
-@import "mixins";
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
+@import "mixins";
 @import "colors";
 @import "cartouche";
 @import "icons";
@@ -9,27 +10,24 @@
 @import "iconsMenu";
 @import "block";
 @import "navbar";
-
 @import "openable";
 
-$colorLink: lighten(saturate($primary, 50%), 25%);
+
+
+$colorLink: lighten(saturate($brand-primary, 50%), 25%);
 
 body {
-  margin: 0;
-  padding: 0;
   background-color: $greyLight;
   background-image: url(../images/bg-25.png);
-  //padding-top: 52px;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, strong, em {
-  color: $primary;
+  color: $brand-primary;
   font-weight: 300;
 }
 
 abbr {
-  color: lighten($primary, 10%);
+  color: lighten($brand-primary, 10%);
   font-weight: 100;
   &:before  { content: '['; }
   &:after   { content: ']'; }
@@ -55,7 +53,7 @@ a {
 .mention {
   font-size: .8em;
   padding: 1em 0;
-  color: hard($primary);
+  color: hard($brand-primary);
 }
 
 .page-header {

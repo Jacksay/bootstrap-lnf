@@ -79,6 +79,7 @@ gulp.task('serve', function () {
   gulp.src('dist')
     .pipe(webserver({
       fallback: 'demo/demo.html',
+      port: 4000,
       livereload: true,
       directoryListing: false,
       open: true

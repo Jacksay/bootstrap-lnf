@@ -2,7 +2,7 @@
 $imSize:           1em !default;
 $imBorderRadius:   .25em !default;
 $imSpacing:        $imBorderRadius;
-$imColor:          $primary !default;
+$imColor:          $brand-primary !default;
 
 @mixin menuColor( $color ){
   background-color: rgba(light($color),.9);
@@ -22,10 +22,10 @@ $imColor:          $primary !default;
 
 .menu-icon {
   @include border-radius($imBorderRadius);
-  @include menuColor($primary);
+  @include menuColor($brand-primary);
 
   &.compl {
-    @include menuColor($compl);
+    @include menuColor($brand-complementary);
   }
   &.neutral {
     @include menuColor($grey);

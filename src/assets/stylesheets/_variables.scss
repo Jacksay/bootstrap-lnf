@@ -1,73 +1,48 @@
 $grey:  #68717A;
 $greyLight: lighten($grey, 42%);
 
+//== Colors (bootstrap inspired)
+//
+//##
+$gray-base:              #111 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-/*
-$rgba-primary-0: rgba( 20,100, 86,1);
-$rgba-secondary-1-0: rgba( 27, 63,103,1);
-$rgba-secondary-2-0: rgba(157,108, 31,1);
-$rgba-complement-0: rgba(157, 82, 31,1);
-*/
+$brand-primary:         #48486F !default;
+$brand-complementary:   rgb(255 - red($brand-primary), 255 - green($brand-primary), 255 - blue($brand-primary)) !default;
+$brand-secondary1:      #53446C !default;
+$brand-secondary2:      #9E965E !default;
 
-$rgba-primary-0: #551868;
-$rgba-secondary-1-0: #7F1951;
-$rgba-secondary-2-0: #6A921D;
-$rgba-complement-0: #929B1F;
+$brand-success:         #499D1F !default;
+$brand-info:            #30B0D5 !default;
+$brand-warning:         #C69951 !default;
+$brand-danger:          #DD423E !default;
 
-$rgba-primary-0: #48486F;	// Main Primary color */
-$rgba-primary-1: #AFAFD2;
-$rgba-primary-2: #7D7DC2;
-$rgba-primary-3: #161621;
-$rgba-primary-4: #161621;
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
 
-$rgba-secondary-1-0: #53446C;	// Main Secondary color (1) */
-$rgba-secondary-1-1: #B7AACF;
-$rgba-secondary-1-2: #9177BF;
-$rgba-secondary-1-3: #191520;
-$rgba-secondary-1-4: #191520;
+//** Global textual link color.
+$link-color:            lighten(saturate($brand-primary, 50%), 25%) !default;
 
-$rgba-secondary-2-0: #9E965E;	// Main Secondary color (2) */
-$rgba-secondary-2-1: #FFF9CD;
-$rgba-secondary-2-2: #FFF294;
-$rgba-secondary-2-3: #2F2D1D;
-$rgba-secondary-2-4: #2F2D1D;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
 
-$rgba-complement-0: #9E8E5E;	// Main Complement color */
-$rgba-complement-1: #FFF2CD;
-$rgba-complement-2: #FFE494;
-$rgba-complement-3: #2F2B1D;
-$rgba-complement-4: #2F2B1D;
-/*
-// Primary Color
-$cPrimary:                #A600A6;
-$cPrimaryDesaturate:      #7C1F7C;
-$cPrimaryDark:            #6C006C;
-$cPrimaryLight:           #D235D2;
-$cPrimaryUltraLight:      #D25FD2;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
 
-// Secondary A Color
-$cSecondaryA:              #E40045;
-$cSecondaryADesaturate:    #AB2B52;
-$cSecondaryADark:          #94002D;
-$cSecondaryALight:         #F13C73;
-$cSecondaryAUltraLight:    #F16D95;
+//== Typography
+//
+//##
+$headings-font-weight:    200 !default;
+$font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
-// Secondary B Color
-$cSecondaryB:              #530FAD;
-$cSecondaryBDesaturate:    #4F2982;
-$cSecondaryBDark:          #330570;
-$cSecondaryBLight:         #8243D6;
-$cSecondaryBUltraLight:    #996AD6;
-
-// Complementary Color
-$cComplementary:              #CCF600;
-$cComplementaryDesaturate:    #A1B92E;
-$cComplementaryDark:          #85A000;
-$cComplementaryLight:         #DAFB3F;
-$cComplementaryUltraLight:    #E3FB71;
-
-*/
-
+/**
+ * Calcule du pourcentage d'une partie d'une couleur RGB.
+ */
 @function colorAmount( $value, $amount){
   $ret: $value / 100 * $amount;
   @if $ret > 255{
@@ -76,49 +51,17 @@ $cComplementaryUltraLight:    #E3FB71;
   @return $ret;
 }
 
-// Calculated Colors
-/*
-$primary: #AEAB6A;
-$compl : complement($primary);
-$secondaryA: rgb(blue($primary), red($primary), green($primary));
-$secondaryB: rgb(blue($compl), red($compl), green($compl));
-$secondaryC: rgb(red($primary), blue($primary), green($primary));
-$secondaryD: rgb(red($compl), blue($compl), green($compl));
-$ultraLight: lighten($primary, 80%);
--*/
+$ultraLight: lighten($brand-primary, 80%);
 
-$primary:       $rgba-primary-0 !default;
-$compl :        $rgba-complement-0 !default;
-$secondaryA:    $rgba-secondary-1-0 !default;
-$secondaryB:    $rgba-secondary-2-0 !default;
-$success:       #499D1F !default;
-$info:          #30B0D5 !default;
-$danger:        #DD423E !default;
-$warning:       #C69951 !default;
-
-$ultraLight: lighten($primary, 80%);
-
-
-
+//== List
+//
+//## (Generated rules)
 $colorsName: primary secondary1 secondary2 complementary success info danger warning;
-$colors: $primary $secondaryA $secondaryB $compl $success $info $danger $warning;
+$colors: $brand-primary $brand-secondary1 $brand-secondary2 $brand-complementary $brand-success $brand-info $brand-danger $brand-warning;
 $sizes: xs standard big hudge;
 
-// #AA3939 #AA6C39 #226666 #2D882D;
-
-$colorMedium:   #64817A;
-$colorBlue:     #30b0d5;
-$colorOrange:   #C69951;
-$colorRed:      #DD423E;
-$colorGreen:    #499D1F;
-$colorPurple:   #853F89;
-$colorDark:     #1F180D;
-$colorLight:    #FEFEEF;
-$colorWhite:    #FFFFFF;
-
-$colorDefault:  $colorMedium;
-$border: solid thin lighten($colorMedium, 50%);
-
+$colorDefault:  $brand-primary;
+$border: solid thin lighten($colorDefault, 50%);
 
 $borderRadius: .25em;
 $padding:      .5em;
