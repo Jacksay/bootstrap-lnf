@@ -1,7 +1,7 @@
 /*! © 2015 Université de Caen Basse-Normandie */
 @import "variables";
 
-@import "../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import $path-bootstrap-sass;
 
 @import "mixins";
 @import "colors";
