@@ -5,9 +5,9 @@
 
 @mixin cartouche-addon($color){
   background-color: $color;
-  color: lighten($color, 85%);
+  color: lighten($color, 60%);
   a {
-    color: lighten($color, 85%);
+    color: lighten($color, 60%);
   }
   border-color: $color;
   box-shadow: inset -.125em .125em .25em rgba(255,255,255,.1), inset .125em -.125em .5em rgba(0,0,0,.1),0 0 8px rgba(darken($color, 75%), .25);
